@@ -2,9 +2,9 @@
 #Authors: Jonathan Johnson & Ben Shell
 #References: https://stackoverflow.com/ && https://github.com/target/huntlib.git
 
-SETUP_SPLUNK="False"
-SETUP_ELASTIC="True"
-SETUP_ZEEK="True"
+SETUP_SPLUNK="True"
+SETUP_ELASTIC="False"
+SETUP_ZEEK="False"
 
 HOST_IP="<logger-IP>"
 
