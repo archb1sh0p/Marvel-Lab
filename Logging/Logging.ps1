@@ -122,7 +122,7 @@ function Install-Logging {
 
                 Remove-Item 'C:\Program Files\SplunkUniversalForwarder\etc\apps\SplunkUniversalForwarder\local\inputs.conf'
 
-                Copy-Item $ProjectFilePath\Logging\splunk\inputs.conf 'C:\Program Files\SplunkUniversalForwarder\etc\apps\SplunkUniversalForwarder\local\inputs.conf'
+                Copy-Item $ProjectFilePath\Logging\Config\splunk\inputs.conf 'C:\Program Files\SplunkUniversalForwarder\etc\apps\SplunkUniversalForwarder\local\inputs.conf'
 
                 & cmd.exe /c 'C:\Program Files\SplunkUniversalForwarder\bin\splunk.exe' start
 
