@@ -16,8 +16,9 @@ services:
       - ./web.conf:/opt/splunk/etc/system/local/web.conf
       - ../zeek/zeek-logs/:/logs/zeek-logs/
     labels:
+      - "traefik.http.routers.splunk.rule=PathPrefix(`/splunk`)"
+      - "traefik.http.routers.splunk.middlewares=https-redirect"
+      - "traefik.http.routers.splunk-secure.tls=true"
+      - "traefik.http.routers.splunk-secure.rule=PathPrefix(`/splunk`)"
+      - "traefik.http.services.splunk.loadbalancer.server.port=8000"
     restart: unless-stopped
-
-volumes:
-  splunk_etc:
-  splunk_var:
