@@ -1,7 +1,7 @@
 services:
   splunk:
     container_name: splunk
-    image: splunk/splunk:${SPLUNK_VER}
+    image: ${SPLUNK_IMAGE:-splunk/splunk:latest}
     ports:
       - 9997:9997
       - 8089:8089
